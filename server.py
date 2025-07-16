@@ -60,4 +60,4 @@ def catch_all(path, **kwargs):
         return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-  run(app, port=4242)
+  app.run(port=4242)
