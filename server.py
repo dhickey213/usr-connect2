@@ -60,5 +60,4 @@ def catch_all(path, **kwargs):
         return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-  from waitress import serve
-    serve(app, port=4242)
+  run(app, port=4242)
