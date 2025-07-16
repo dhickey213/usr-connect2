@@ -61,4 +61,4 @@ def catch_all(path, **kwargs):
 
 if __name__ == '__main__':
   from waitress import serve
-    serve(app, port=4242)
+    serve(app, debug=false, port=4242)
