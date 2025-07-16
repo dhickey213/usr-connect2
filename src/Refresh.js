@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams} from "react-router";
+import { useParams } from "react-router";
 
 export default function Refresh() {
   const {connectedAccountId} = useParams();
