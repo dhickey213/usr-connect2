@@ -47,7 +47,7 @@ def create_account():
         print('An error occurred when calling the Stripe API to create an account: ', e)
         return jsonify(error=str(e)), 500
 
-@app.route('/', defaults={'path': ''})
+@app.route('/')
 def hello():
     return send_from_directory(app.static_folder, 'index.html')
 
