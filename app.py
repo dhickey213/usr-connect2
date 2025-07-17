@@ -13,8 +13,8 @@ stripe.api_version = '2023-10-16'
 
 from flask import Flask, jsonify, send_from_directory, request
 
-app = Flask(__name__, static_folder='src',
-  static_url_path='', template_folder='src')
+app = Flask(__name__, static_folder='public',
+  static_url_path='', template_folder='public')
 
 @app.route('/account_link', methods=['POST'])
 def create_account_link():
