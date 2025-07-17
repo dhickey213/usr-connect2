@@ -49,7 +49,7 @@ def create_account():
 
 @app.route('/')
 def hello():
-    return render_template('public/index.html')
+    return render_template('index.html')
 
 # Flask does not like serving static files with a sub-path, so just force them to serve up the frontend here
 @app.route('/return/<path>')
