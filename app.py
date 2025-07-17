@@ -48,6 +48,8 @@ def create_account():
         return jsonify(error=str(e)), 500
 
 @app.route('/', defaults={'path': ''})
+def hello():
+    return send_from_directory(app.static_folder, 'index.html')
 
 # Flask does not like serving static files with a sub-path, so just force them to serve up the frontend here
 @app.route('/return/<path>')
