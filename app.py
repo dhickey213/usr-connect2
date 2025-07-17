@@ -11,7 +11,7 @@ stripe.api_key = 'sk_INSERT_YOUR_SECRET_KEY'
 
 stripe.api_version = '2023-10-16'
 
-from flask import Flask, jsonify, send_from_directory, request
+from flask import Flask, jsonify, send_from_directory, request, render_template
 
 app = Flask(__name__, static_folder='public',
   static_url_path='', template_folder='public')
