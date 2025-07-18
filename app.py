@@ -13,7 +13,7 @@ stripe.api_version = '2023-10-16'
 
 from flask import Flask, jsonify, send_from_directory, request, render_template
 
-app = Flask(__name__, static_folder='templates,
+app = Flask(__name__, static_folder='templates',
   static_url_path='', template_folder='templates')
 
 @app.route('/account_link', methods=['POST'])
