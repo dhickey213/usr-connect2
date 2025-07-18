@@ -1,9 +1,9 @@
 import React from "react";
-import Home from "./Home";
-import Refresh from "./Refresh";
-import Return from "./Return";
+import Home from "./src/Home";
+import Refresh from "./src/Refresh";
+import Return from "./src/Return";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./App.css";
+import "./src/App.css";
 
 const router = createBrowserRouter([
   {
