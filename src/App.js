@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./Home";
+import Home from "/Home";
 import Refresh from "./Refresh";
 import Return from "./Return";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
