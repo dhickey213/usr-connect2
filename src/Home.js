@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function Home() {
+export default function Home() {
   const [accountCreatePending, setAccountCreatePending] = useState(false);
   const [accountLinkCreatePending, setAccountLinkCreatePending] = useState(false);
   const [error, setError] = useState(false);
