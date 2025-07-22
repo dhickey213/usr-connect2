@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-export function Return() {
+export default function Return() {
   const {connectedAccountId} = useParams();
 
   return (
