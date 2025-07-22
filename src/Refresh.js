@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function Refresh() {
+export function Refresh() {
   const {connectedAccountId} = useParams();
   const [accountLinkCreatePending, setAccountLinkCreatePending] = useState(false);
   const [error, setError] = useState(false);
