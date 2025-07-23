@@ -7,7 +7,7 @@ import os
 # This is a placeholder - it should be replaced with your secret API key.
 # Sign in to see your own test API key embedded in code samples.
 # Don’t submit any personally identifiable information in requests made with this key.
-stripe.api_key = 'sk_INSERT_YOUR_SECRET_KEY'
+stripe.api_key = os.environ['stripe']
 
 stripe.api_version = '2023-10-16'
 
