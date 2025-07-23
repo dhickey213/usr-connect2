@@ -23,8 +23,8 @@ def create_account_link():
 
         account_link = stripe.AccountLink.create(
           account=connected_account_id,
-          return_url=f"http://localhost:4242/return/{connected_account_id}",
-          refresh_url=f"http://localhost:4242/refresh/{connected_account_id}",
+          return_url=f"https://localhost:4242/return/{connected_account_id}",
+          refresh_url=f"https://localhost:4242/refresh/{connected_account_id}",
           type="account_onboarding",
         )
 
