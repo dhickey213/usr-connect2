@@ -47,7 +47,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #635BFF;
+  background-color: #E0D7CC;
   color: #ffffff;
 }
 
@@ -106,7 +106,7 @@ button {
   margin-top: 32px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #635BFF;
+  background-color: #FF975a;
   color: #ffffff;
   width: 420px;
 }
