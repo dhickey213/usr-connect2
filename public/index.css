@@ -110,7 +110,7 @@ button {
   padding-bottom: 10px;
   background-color: #FF975a;
   color: #ffffff;
-  width: 320px;
+  width: 300px;
 }
 
 .button2 {
@@ -125,7 +125,7 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: Transparent;
-  color: #282828;
+  color: #ff975a;
   width: 320px;
 }
 button:hover {
