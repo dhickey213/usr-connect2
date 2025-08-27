@@ -63,3 +63,28 @@ def catch_all(path, **kwargs):
 
 if __name__ == '__main__':
   app.run(debug=True, port=8080)
+
+@app.route('/complete', methods=['POST'])
+def createCharge(appName, unit_amount, acctID):
+    try:
+      session = stripe.checkout.Session.create(
+      line_items=[
+        {
+          "price_data": {
+            "currency": "usd",
+            "product_data": {"App Name": appName},
+            "unit_amount": (unit_amount * 100),
+          },
+          "quantity": 1,
+        },
+      ],
+    #  payment_intent_data={"application_fee_amount": 123},
+      mode="payment",
+      success_url="https://example.com/success?session_id={CHECKOUT_SESSION_ID}",
+      stripe_account= acctID,
+      )
+      return jsonify({'status':"success"})
+    
+    except Exception as e:
+        print('An error occurred when calling the Stripe API to create an account link: ', e)
+        return jsonify(error=str(e)), 500
