@@ -13,6 +13,6 @@
   },
   "source": "public/index.html",
   "dependencies": {
-    "@stripe/connect-js": "3.3.5"
+    "@stripe/connect-js": "3.3.28"
   }
 }
