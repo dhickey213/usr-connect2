@@ -67,6 +67,7 @@ if __name__ == '__main__':
 
 @app.route('/complete', methods=['POST'])
 def createCharge(data):
+    data = json.loads(data)
     appID = data['appID']
     unit_amount = data['unit_amount']
     acctID = data['acctID']
