@@ -10,7 +10,7 @@ import json
 # Sign in to see your own test API key embedded in code samples.
 # Don’t submit any personally identifiable information in requests made with this key.
 #stripe.api_key = os.environ['stripe']
-strpe.api_key = os.environ['stripeTest']
+stripe.api_key = os.environ['stripeTest']
 
 stripe.api_version = '2023-10-16'
 
