@@ -78,7 +78,7 @@ def createCharge():
         {
           "price_data": {
             "currency": "usd",
-            "product_data": {"App Name": appID},
+            "product_data": {"name": appID},
             "unit_amount": (unit_amount * 100),
           },
           "quantity": 1,
