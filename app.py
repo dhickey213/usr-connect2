@@ -67,9 +67,9 @@ if __name__ == '__main__':
 
 @app.route('/complete', methods=['POST'])
 def createCharge():
-    appName = requests.data['appName']
+    appID = requests.data['appID']
     unit_amount = requests.data['unit_amount']
-    acctID = requests.data['appID']
+    acctID = requests.data['acctID']
     try:
       session = stripe.checkout.Session.create(
       line_items=[
