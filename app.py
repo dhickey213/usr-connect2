@@ -70,7 +70,7 @@ if __name__ == '__main__':
 def createCharge():
     data = json.loads(request.data)
     appID = data['appID']
-    unit_amount = data['unit_amount']
+    unit_amount = int(data['unit_amount'])
     acctID = data['acctID']
     try:
       session = stripe.checkout.Session.create(
