@@ -65,7 +65,7 @@ if __name__ == '__main__':
   app.run(debug=True, port=8080)
 
 @app.route('/complete', methods=['POST'])
-def createCharge(appName, unit_amount, acctID):
+def createCharge():
     try:
       session = stripe.checkout.Session.create(
       line_items=[
