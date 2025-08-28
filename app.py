@@ -3,6 +3,7 @@ Python 3.6 or newer required.
 """
 import stripe
 import os
+import requests
 
 # This is a placeholder - it should be replaced with your secret API key.
 # Sign in to see your own test API key embedded in code samples.
@@ -66,6 +67,9 @@ if __name__ == '__main__':
 
 @app.route('/complete', methods=['POST'])
 def createCharge():
+    appName = requests.data['appName']
+    unit_amount = requests.data['unit_amount']
+    acctID = requests.data['appID']
     try:
       session = stripe.checkout.Session.create(
       line_items=[
