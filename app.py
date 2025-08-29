@@ -87,7 +87,7 @@ def createCharge():
       ],
       #payment_intent_data={"application_fee_amount": 1},
       mode="payment",
-      success_url=f"https://sample-react-rt2za.ondigitalocean.app/complete/success?session_id={CHECKOUT_SESSION_ID}",
+      success_url=f"https://sample-react-rt2za.ondigitalocean.app/success?session_id={CHECKOUT_SESSION_ID}",
       stripe_account='{{CONNECTED_ACCOUNT_ID}}',
       )
       return jsonify ({'url':success_url})
