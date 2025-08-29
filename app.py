@@ -85,7 +85,7 @@ def createCharge():
           "quantity": 1,
         },
       ],
-    #  payment_intent_data={"application_fee_amount": 123},
+      payment_intent_data={"application_fee_amount": 1},
       mode="payment",
       success_url="https://sample-react-rt2za.ondigitalocean.app/success?session_id=acct_1S1B2NCArl7jXbcH",
       stripe_account= "acct_1S1B2NCArl7jXbcH",
