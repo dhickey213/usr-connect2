@@ -87,10 +87,10 @@ def createCharge():
               ],
               #payment_intent_data={"application_fee_amount": 123},
                 mode="payment",
-                success_url="https://example.com/success?session_id={CHECKOUT_SESSION_ID}",
+                success_url="https://sample-react-rt2za.ondigitalocean.app/success?session_id={CHECKOUT_SESSION_ID}",
                stripe_account=acctID,
            )
-        return jsonify({'url':success_url})
+        return jsonify({'status': session})
            
     except Exception as e:
           print('An error occurred when calling the Stripe API to create an account link: ', e)
