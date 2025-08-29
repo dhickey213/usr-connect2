@@ -89,8 +89,8 @@ def createCharge():
     mode="payment",
     success_url="https://example.com/success?session_id={CHECKOUT_SESSION_ID}",
     stripe_account='{{CONNECTED_ACCOUNT_ID}}',
-    ) 
-    return jsonify ({'status':"success"})
+      ) 
+      return jsonify ({'status':"success"})
     
     except Exception as e:
         print('An error occurred when calling the Stripe API to create an account link: ', e)
