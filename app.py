@@ -97,3 +97,36 @@ def createCharge():
     except Exception as e:
           print('An error occurred when calling the Stripe API to create an account link: ', e)
           return jsonify(error=str(e)), 500
+
+endpoint_secret = os.environ['endpoint']
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    event = None
+    payload = request.data
+    sig_header = request.headers['STRIPE_SIGNATURE']
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, endpoint_secret
+        )
+    except ValueError as e:
+        # Invalid payload
+        raise e
+    except stripe.error.SignatureVerificationError as e:
+        # Invalid signature
+        raise e
+
+    # Handle the event
+    if event['type'] == 'checkout.session.async_payment_failed':
+      session = event['data']['object']
+    elif event['type'] == 'checkout.session.async_payment_succeeded':
+      session = event['data']['object']
+    elif event['type'] == 'checkout.session.completed':
+      session = event['data']['object']
+    elif event['type'] == 'checkout.session.expired':
+      session = event['data']['object']
+    # ... handle other event types
+    else:
+      print('Unhandled event type {}'.format(event['type']))
+
+    return jsonify(success=True)
