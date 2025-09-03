@@ -90,8 +90,7 @@ def createCharge():
                 success_url="https://checkout.stripe.com/success?session_id={CHECKOUT_SESSION_ID}",
                stripe_account=acctID,
            )
-        #return jsonify({'status': session})
-        return jsonify({"success":session})
+        return jsonify({'status': session})
       
            
     except Exception as e:
