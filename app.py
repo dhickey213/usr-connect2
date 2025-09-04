@@ -75,7 +75,7 @@ def createCharge():
     acctID = data['acctID']
     uid = data['uid']
 
-    URL = 'https://urchin-app-wdpbt.ondigitalocean.app'
+    inputURL = 'https://urchin-app-wdpbt.ondigitalocean.app'
     params = {'v1':appID, 'v2':uid}
     encodedParams = urllib.parse.urlencode(params)
     try:
@@ -92,7 +92,7 @@ def createCharge():
               ],
               #payment_intent_data={"application_fee_amount": 123},
                 mode="payment",
-                success_url= f'{url}?{encoded_params}',
+                success_url= f'{inputURL}?{encoded_params}',
                 stripe_account=acctID,
            )
         return jsonify({'status': session})
