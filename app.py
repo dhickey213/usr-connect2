@@ -73,6 +73,11 @@ def createCharge():
     appID = data['appID']
     unit_amount = int(data['unit_amount'])
     acctID = data['acctID']
+    uid = data['uid']
+
+    URL = 'https://urchin-app-wdpbt.ondigitalocean.app'
+    params = {'v1':appID, 'v2':uid}
+    encodedParams = urllib.parse.urlencode(params)
     try:
         session = stripe.checkout.Session.create(  
              line_items=[
@@ -87,7 +92,7 @@ def createCharge():
               ],
               #payment_intent_data={"application_fee_amount": 123},
                 mode="payment",
-                success_url="https://checkout.stripe.com/success?session_id={CHECKOUT_SESSION_ID}",
+                success_url= f'{url}?{encoded_params}',
                 stripe_account=acctID,
            )
         return jsonify({'status': session})
