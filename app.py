@@ -4,7 +4,7 @@ Python 3.6 or newer required.
 import stripe
 import os
 import requests
-import json
+import json, urllib
 
 # This is a placeholder - it should be replaced with your secret API key.
 # Sign in to see your own test API key embedded in code samples.
