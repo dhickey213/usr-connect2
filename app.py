@@ -76,7 +76,7 @@ def createCharge():
     uid = data['uid']
 
     inputURL = 'https://urchin-app-wdpbt.ondigitalocean.app'
-    params = {'v1':appID, 'v2':uid}
+    params = {'var':uid}
     encodedParams = urllib.parse.urlencode(params)
     try:
         session = stripe.checkout.Session.create(  
