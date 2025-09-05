@@ -75,7 +75,7 @@ def createCharge():
     acctID = data['acctID']
     uid = data['uid']
 
-    inputURL = 'https://urchin-app-wdpbt.ondigitalocean.app'
+    inputURL = 'https://urchin-app-wdpbt.ondigitalocean.app/complete'
     params = {'var':uid}
     encodedParams = urllib.parse.urlencode(params)
     try:
